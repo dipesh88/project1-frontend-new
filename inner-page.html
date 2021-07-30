@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/images.png" rel="icon">
-  <link href="assets/img/images.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -29,7 +29,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/demo.css" rel="stylesheet">
 
 </head>
 
@@ -46,13 +45,90 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="index.html/#about">About</a></li>
+          <li><a href="index.html/#materials">Material</a></li>
+          <li><a href="index.html/#contact">Contact</a></li>
+          <li><a href="index.html/#team">Team</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="login.html" class="get-started-btn scrollto">SIGN IN</a>
+      <a href="login/login.html" class="get-started-btn scrollto">SIGN IN</a>
 
     </div>
   </header><!-- End Header -->
+  <script>
+    $(document).ready(function () {
+      $('.mdb-select').materialSelect();
+      $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+        $(this).closest('.select-outline').find('label').toggleClass('active');
+        $(this).closest('.select-outline').find('.caret').toggleClass('active');
+      });
+    });
+  </script>
+
+  <!-- cascading dropdoen -->
+  <script>
+    var subjectObject = {
+      "FDM": {
+        "PLA": ["WHITE", "GRAY", "GREEN", "RED"],
+        "ABS-M30": ["WHITE", "AQUA", "BLACK"],
+        "ABS-ESD7": ["WHITE", "GRAY"],
+        "PC": ["RED", "GREEN", "BLUE", "GRAY"],
+        "NYLON-12": ["WHITE", "GRAY"],
+      },
+      "SLS": {
+        "EPOXY RESIN": ["WHITE"],
+        "ACCURA-25": ["WHITE", "GRAY"],
+        "POLYAMIDE": ["WHITE", "GRAY"],
+        "NYLON-12": ["WHITE"],
+      },
+      "SLA": {
+        "PLA": ["WHITE", "GRAY", "GREEN", "RED"],
+        "ABS-M30": ["WHITE", "AQUA", "BLACK"],
+        "ABS-ESD7": ["WHITE", "GRAY"],
+        "PC": ["RED", "GREEN", "BLUE", "GRAY"],
+        "NYLON-12": ["WHITE", "GRAY"],
+      },
+      "DMLS": {
+        "STAINLESS STEEL": [],
+        "ALUMINIUM-ALSi10Mg": [],
+        "NICKAL ALLOY-718": [],
+        "TITANIUM-Ti64": [],
+        "COBALT CHROME-CoCrMo": [],
+        "TOOL STEEL": [],
+      },
+      "MJF": {
+        "NYLON-12PA": ["WHITE", "GRAY"],
+        "POLYPROPYLENE": ["WHITE", "GRAY", "GREEN", "RED"],
+      }
+    }
+    window.onload = function () {
+      var subjectSel = document.getElementById("subject");
+      var topicSel = document.getElementById("topic");
+      var chapterSel = document.getElementById("chapter");
+      for (var x in subjectObject) {
+        subjectSel.options[subjectSel.options.length] = new Option(x, x);
+      }
+      subjectSel.onchange = function () {
+        //empty Chapters- and Topics- dropdowns
+        chapterSel.length = 1;
+        topicSel.length = 1;
+        //display correct values
+        for (var y in subjectObject[this.value]) {
+          topicSel.options[topicSel.options.length] = new Option(y, y);
+        }
+      }
+      topicSel.onchange = function () {
+        //empty Chapters dropdown
+        chapterSel.length = 1;
+        //display correct values
+        var z = subjectObject[subjectSel.value][this.value];
+        for (var i = 0; i < z.length; i++) {
+          chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+        }
+      }
+    }
+  </script>
 
   <main id="main">
 
@@ -61,168 +137,115 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
+          <h2>WORKSPACE</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
+            <li><a href="login/login.html">login</a></li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- Drag And Drop Module -->
+    <section class="inner-page">
+      <div class="container px-lg-5">
+        <div class="row mx-lg-n5">
+          <!-- Card -->
+          <div style="border:solid 3px black; width: 700px; margin-left: 50px;"
+            class="col py-3 px-lg-5 border bg-light">
+            <div class="pt-4 pb-3">
 
-    <body>
-      <!--Mask-->
-      <div class="overlay"></div>
-      <!--Modal frame-->
-      <div id="modal" class="dropbox">
-        <div class="items-container">
-          <div id="close" style="cursor:pointer;float: right;width:20px">
-            <span class="css-close"></span>
-          </div>
-          <div>
-            <p class="head"><b>Drag files to this point</b></p>
-            <div class="content" id="content">
-              <table class="table">
-                <tbody class="tbody"></tbody>
-              </table>
-            </div>
-            <div class="footer">
-              <button class="btn" onclick="upload()">Start uploading</button>
-            </div>
-            <a href='#' onclick='clearAll()' style='position:absolute;bottom:10px;right:30px;'>Empty all</a>
+              <!-- Grid row -->
+              <div style="margin-left: 50px;" class="row">
+
+                <!-- Grid column -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+
+                  <h5 class="mb-4 pb-1">MATERIAL DETAIL</h5>
+                  <!-- DIMENSIONS -->
+                  <div class="d-flex flex-wrap">
+                    <div class="select-outline position-relative w-100">
+                      <label style="margin-right:50px;">DIMENSIONS</label>
+                      <select style="padding-inline: 120px;" class="mdb-select md-form md-outline">
+                        <option value="" disabled selected>units</option>
+                        <option value="1">MM</option>
+                        <option value="2">CM</option>
+                        <option value="3">INCH</option>
+                      </select>
+                    </div>
+                  </div><br>
+                  
+                  <!-- LENGTH -->
+                  <div class="md-form md-outline mt-0">
+                    <input type="number" id="form15" placeholder="number" class="form-control">
+                    <label for="form15">LENGTH</label>
+                  </div>
+
+                  <!-- BREATH-->
+                  <div class="md-form md-outline mt-0">
+                    <input type="number" id="form16" placeholder="number" class="form-control">
+                    <label for="form16">BREATH</label>
+                  </div>
+
+                  <!-- HEIGHT -->
+                  <div class="md-form md-outline mt-0">
+                    <input type="number" id="form17" placeholder="number" class="form-control">
+                    <label for="form17">HEIGHT</label>
+                  </div>
+                  <br>
+
+                  <!-- RESOLUTION -->
+                  <div class="d-flex flex-wrap">
+                    <div class="select-outline position-relative w-100">
+                      <label style="margin-right:50px;">RESOLUTION</label>
+                      <select style="padding-left: 100px; width: 280px;" class="mdb-select md-form md-outline">
+                        <option value="" disabled selected>select</option>
+                        <option value="1">HIGH RESOLUTION</option>
+                        <option value="2">LOW RESOLUTION</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                  <form name="form1" id="form1" action="ship.html">
+                    PROCESS <select style="width: 205px; padding-left: 50px;" name="subject" id="subject">
+                      <option value="" selected="selected">process</option>
+                    </select>
+                    <br><br>
+                    MATERIAL <select style="width: 200px; padding-left: 50px;" name="topic" id="topic">
+                      <option value="" selected="selected">material</option>
+                    </select>
+                    <br><br>
+                    COLOUR <select style="width: 210px; padding-left: 60px;" name="chapter" id="chapter">
+                      <option value="" selected="selected">colour</option>
+                    </select>
+                    <br><br>
+
+                  <h5 class="mb-4 pb-1">Additional information</h5>
+
+                    <!-- Additional information -->
+                    <div class="md-form md-outline">
+                      <textarea id="form76" class="md-textarea form-control" rows="4"></textarea>
+                      <label for="form76">Additional information</label>
+                    </div>
+                    <br>
+
+                      <!-- NO. OF COPIES -->
+                  <div class="md-form md-outline mt-0">
+                    <input type="number" id="form15" placeholder="number of copies" class="form-control">
+                    <label for="form15">COPIES</label>
+                  </div><BR>
+                    <input style="width: 210px; padding-left: 30px;" type="submit" value="Submit">
+                  </form>
+                </div>
+              </div>
+              <!-- Grid row -->
+            </div><br>
+            <!-- Card -->
           </div>
         </div>
       </div>
-      <!--Page content-->
-      <div style="margin-top:40vh;text-align: center;">
-        <p>Drag and upload the demo template. Click the button below to pop up the modal box</p>
-        <button class="btn" onclick="showModal()">Click Upload</button>
       </div>
-      <!--Embedded script-->
-      <script src="jquery-1.10.2.js" type="text/javascript"></script>
-      <script src="demo.js" type="text/javascript"></script>
-    </body>
-
-
-    <!-- Drag and Drop Module Ends Here -->
-
-
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          <!-- Dimensions -->
-        <h3>Select Unit Of Dimensions</h3>
-        </p>
-        <label class="get-started-btn scrollto" for="Dimensions">Unit Of Dimensions</label>
-        <select name="Dimensions" id="Dimensions">
-          <option class ="" value="Select An Option">Select An Option</option>
-          <option value="MM">MM</option>
-          <option value="CM">CM</option>
-          <option value="INCH">INCH</option>
-
-        </select>
-        </br>
-        <!-- Volume -->
-        <h4>Enter Values For Volume</h4>
-        <h5>Enter Length</h5>
-        <textarea id="Volume" name="Volume" rows="1" cols="4">
-        </textarea>
-        <h5>Enter Bredth</h5>
-        <textarea id="w3review" name="w3review" rows="1" cols="4">
-                </textarea>
-        <h5>Enter Height</h5>
-        <textarea id="w3review" name="w3review" rows="1" cols="4">
-                        </textarea>
-        </br></br>
-        <!-- Material -->
-        <h4>Select Material For Your Model</h4>
-        <label for="Material">Material </label>
-        <select name="Dimensions" id="Dimensions">
-          <option value="Select An Option">Select An Option</option>
-          <option value="MM">PLA</option>
-          <option value="CM">ABS</option>
-          <option value="INCH">Metal</option>
-
-        </select>
-        </br></br>
-        <!-- Resolution -->
-        <h4>Select Resolution For Your Model</h4>
-        <label for="Material">Resolution</label>
-        <select name="Dimensions" id="Dimensions">
-          <option value="Select An Option">Select An Option</option>
-          <option value="MM">High Resolution</option>
-          <option value="CM">Low Resolution</option>
-          <!-- <option value="INCH">Metal</option> -->
-
-        </select>
-        </br></br>
-        <!-- Color -->
-        <h4>Select Color For Your Model</h4>
-        <label for="Color">Color</label>
-        <select name="Dimensions" id="Dimensions">
-          <option value="Select An Option">Select An Option</option>
-          <option value="Red">Red</option>
-          <option value="Blue">Blue</option>
-          <option value="Black">Black</option>
-          <option value="Other">Other</option>
-        </select>
-        </br></br>
-
-
-        <h4> Enter Custom Color </h4></br>
-        <label for="Color"> Comma Seprated Values</label>
-        <textarea id="Color" name="Color" rows="1" cols="4"> </textarea>
-
-        </br></br>
-        
-
-        <h4>Select Application For Your Model</h4>
-        <label for="Application">Application</label>
-        <select name="Application" id="Application">
-          <option value="Select An Option">Select An Option</option>
-          <option value="FDM">FDM</option>
-          <option value="SLS">SLS</option>
-          <option value="SLM">SLM</option>
-          <option value="FBM">FBM</option>
-          <option value="Other">Other</option>
-        </select>
-        </br></br>
-        <!-- <script> -->
-        <!-- // if (Application = Other)
-// { -->
-        <h4> Enter Custom Application </h4></br>
-        <label for="Color"> Enter Only One</label>
-        <textarea id="Color" name="Color" rows="1" cols="4"> </textarea>
-        <!-- } -->
-        </br></br>
-
-        <!-- </script> -->
-
-        <!-- Estimate Rough -->
-        <h4>Rough Estimate According To Volume</h4>
-        <h6>Get Your Model's Instant Quotations</h6>
-        </br>
-        <h4> Enter Email </h4>
-        <label for="Color"> Enter An Email</label>
-        <textarea id="Email" name="Email" rows="1" cols="30"> </textarea>
-        <!-- Quotation = (Price per unit Dimension from supplier * Volume) +  Shipping Charge + Tax -->
-        <!-- Make Quote named variable and assign it as above formulae -->
-        <h6>*Price may vary</h6>
-        </br>
-        <h3>Special Instructions</h3>
-        <label for="Instructions"></label></br>
-        <textarea id="Instructions" name="Special Instructions" rows="6" cols="35"> </textarea>
-
-        <!-- Proceed to login and add see final quotation -->
-        </br></br>
-<!-- Login Button -->
-        <a href="login.html" class="btn btn-warning">Proceed to Login and Final Quote</a>
-
-
-
+    </section>
   </main><!-- End #main -->
 
 
@@ -314,7 +337,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="demo.js"></script>
 
 </body>
 

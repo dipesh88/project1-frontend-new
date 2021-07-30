@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>3D Models Wale</title>
-    <!-- Mobile Specific Metas -->
+    <!-- Mobile Specific Metals -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Font-->
     <link rel="stylesheet" type="text/css" href="css/opensans-font.css">
@@ -26,9 +26,12 @@
                 <p class="text-1">Want to expand your business with us!!</p>
                 <p class="text-2"><span>Make Your Account Now</span> </p>
                 <p>Or, Already Have An Seller Account: - Login</p>
-                <div class="form-left-last">
-                    <input type="submit" name="account" class="account" value="Supplier Login!!">
-                </div>
+                <!-- <div class="form-left-last">
+                    <input  type="submit" name="account" class="account" value="Seller Login!!">
+                </div> -->
+                <form action="/login.html" class="inline">
+                    <button class="account">Seller Login</button>
+                </form>
             </div>
             <form class="form-detail" action="#" method="post" id="myform">
                 <h2>REGISTERATION FORM FOR SUPPLIER</h2>
@@ -67,6 +70,14 @@
                         <input type="password" name="confirm_password" id="confirm_password" class="input-text"
                             required>
                     </div>
+                </div>
+                <div class="form-row">
+                    <label for="Technologies">Technologies (Use , Seperated values)</label>
+                    <input type="text" name="Technologies" id="Technologies" class="input-text">
+                </div>
+                <div class="form-row">
+                    <label for="Printing Capacity">Printing Capacity</label>
+                    <input type="text" name="Printing Capacity" id="Printing Capacity" class="input-text">
                 </div>
                 <div class="form-checkbox">
                     <label class="container">

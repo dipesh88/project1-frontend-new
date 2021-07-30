@@ -4,7 +4,7 @@ body {
 .page-content {
 	width: 100%;
 	margin:  0 auto;
-	background: #75e2e9;
+	background: yellow;
 	display: flex;
 	display: -webkit-flex;
 	justify-content: center;
@@ -44,7 +44,7 @@ body {
 	margin-bottom: 34px;
 }
 .form-v4-content .form-left {
-	background: #3786bd;
+	background: black;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	padding: 20px 40px;

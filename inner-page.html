@@ -45,6 +45,7 @@
 
 <body>
 
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center justify-content-between">
@@ -55,17 +56,30 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="material.html">Material</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="material.html">Materials</a></li>
+          <li class="drop-down"><a href="technology.html">Technology</a>
+            <ul>
+              <li><a href="technology.html/#fdm">FDM</a></li>
+              <li><a href="technology.html/#dmls">DMLS</a></li>
+              <li><a href="technology.html/#mjf">MJF</a></li>
+              <li><a href="technology.html/#sls">SLS</a></li>
+              <li><a href="technology.html/#sla">SLA</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#team">Team</a></li> -->
+          <li><a href="supplier/supplierhome.html">Become a Supplier</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
         </ul>
       </nav><!-- .nav-menu -->
-
-      <a href="login/login.html" class="get-started-btn scrollto">SIGN IN</a>
-
+      <!-- <a style="margin-left:20px;" href="inner-page.html" class="get-started-btn scrollto">Get Your Quote</a> -->
+      <li style="margin-left: 20px;" class="nav-item pl-2 mb-2 mb-md-0 d-md-none d-xl-inline-block">
+        <a href="login.html" type="button" class="get-started-btn scrollto">SIGN UP</a>
+      </li>
     </div>
   </header><!-- End Header -->
+
   <script>
     $(document).ready(function () {
       $('.mdb-select').materialSelect();
@@ -185,19 +199,19 @@
 
               <!-- LENGTH -->
               <div class="md-form md-outline mt-0">
-                <input type="number" id="form15" placeholder="number" class="form-control">
+                <input type="number" id="form15" placeholder="Number" class="form-control">
                 <label for="form15">LENGTH</label>
               </div>
 
               <!-- BREATH-->
               <div class="md-form md-outline mt-0">
-                <input type="number" id="form16" placeholder="number" class="form-control">
+                <input type="number" id="form16" placeholder="Number" class="form-control">
                 <label for="form16">BREATH</label>
               </div>
 
               <!-- HEIGHT -->
               <div class="md-form md-outline mt-0">
-                <input type="number" id="form17" placeholder="number" class="form-control">
+                <input type="number" id="form17" placeholder="Number" class="form-control">
                 <label for="form17">HEIGHT</label>
               </div>
               <br>
@@ -249,7 +263,7 @@
         </div>
         <!-- Card -->
       </div>
-    
+
       <div id="shipping" class="row mx-lg-n5">
         <!-- Card -->
         <div style="border:solid 3px black;  width: 1000px; height: 1016px; margin-left: 0px;"
@@ -261,7 +275,7 @@
 
               <!-- Grid column -->
               <div class="col-lg-6 mb-5 mb-lg-0">
-                <h1>upload your part</h1>
+                <h1>Upload Your Part</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim et quisquam doloribus quo error
                   corrupti dolor asperiores omnis earum maiores! Sequi provident dolore quasi praesentium nobis
                   temporibus veritatis, ullam incidunt error nostrum perspiciatis at odio explicabo? Maiores eius quod
@@ -273,21 +287,23 @@
                 <form class="md-form md-outline">
                   <div class="file-field">
                     <!-- <div class="btn btn-primary btn-sm float-left"> -->
-                      <span>Choose file</span>
-                      <input type="file">
-                    </div>
-                    <div class="file-path-wrapper">
-                      <input class="form-control file-path validate" type="text" placeholder="Upload">
-                    </div>
+                    <span>Choose file</span>
+                    <input type="file">
                   </div>
-                </form>
+                  <div class="file-path-wrapper">
+                    </br></br>
+                    <input class="form-control file-path validate" type="text" placeholder="Upload">
+                  </div>
               </div>
-              <!-- Grid column -->
+            </br>
+              </form>
             </div>
-            <!-- Grid row -->
+            <!-- Grid column -->
           </div>
-          <!-- Card -->
+          <!-- Grid row -->
         </div>
+        <!-- Card -->
+      </div>
       </div>
     </section>
   </main><!-- End #main -->

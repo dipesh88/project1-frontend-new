@@ -6,12 +6,23 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>SHIPPING</title>
+    <style>
+        #material {
+            float: left;
+            width:50%;
+        }
+
+        #shipping {
+            float: right;
+            width: 60%;
+        }
+    </style>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images.png" rel="icon">
+    <link href="images.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -40,11 +51,13 @@
 
             <h1 class="logo"><a href="index.html">3D <span>PRINTING</span></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html"> <big><BIG>HOME</BIG></big> </a></li>
+
+                    <li><a href="inner-page.html"><big><big>WORKSPACE</big></big></a></li>
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -69,7 +82,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <h2>SHIPPING</h2>
                     <ol>
-                        
+
                     </ol>
                 </div>
 
@@ -77,20 +90,20 @@
         </section><!-- End Breadcrumbs -->
 
         <section class="inner-page">
-            <div class="container px-lg-5">
-                <div class="row mx-lg-n5">
-                    <!-- Card -->
-                    <div style="border:solid 3px black;  width: 700px; margin-left: 50px;" class="col py-3 px-lg-5 border bg-light">
-                        <div class="pt-4 pb-3">
+            <div id="material" class="row mx-lg-n5">
+                <!-- Card -->
+                <div style="border:solid 3px black;  width: 700px; margin-left: 50px;"
+                    class="col py-3 px-lg-5 border bg-light">
+                    <div class="pt-4 pb-3">
 
-                            <!-- Grid row -->
-                            <div style="margin-left: 50px;" class="row">
+                        <!-- Grid row -->
+                        <div style="margin-left: 50px;" class="row">
 
-                                <!-- Grid column -->
-                                <div class="col-lg-6 mb-5 mb-lg-0">
+                            <!-- Grid column -->
+                            <div class="col-lg-6 mb-5 mb-lg-0">
 
-                                    <h5 class="mb-4 pb-1">SHIPING DETAIL</h5>
-
+                                <h5 class="mb-4 pb-1">SHIPING DETAIL</h5>
+                                <form name="form1" id="form1" action="Payment.html">
                                     <!-- Grid row -->
                                     <div class="row">
 
@@ -174,20 +187,56 @@
                                     <div class="md-form md-outline">
                                         <textarea id="form76" class="md-textarea form-control" rows="4"></textarea>
                                         <label for="form76">Additional information</label>
-                                    </div>
-
-
-                                </div>
-                                <!-- Grid column -->
-
+                                    </div><br>
+                                    <input style="width: 210px; padding-left: 30px;" type="submit" value="Submit">
+                                </form>
                             </div>
-                            <!-- Grid row -->
+                            <!-- Grid column -->
 
                         </div>
-                        <!-- Card -->
+                        <!-- Grid row -->
+
                     </div>
+                    <!-- Card -->
                 </div>
             </div>
+
+            <div id="shipping" class="row mx-lg-n5">
+                <!-- Card -->
+                <div style="border:solid 3px black;  width: 1000px; height: 958px; margin-left: 0px;"
+                    class="col py-3 px-lg-5 border bg-light">
+                    <div class="pt-4 pb-3">
+
+                        <!-- Grid row -->
+                        <div style="margin-left: 50px;" class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-lg-6 mb-5 mb-lg-0">
+                                <h1>SUPPLIER LIST</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim et quisquam doloribus
+                                    quo error
+                                    corrupti dolor asperiores omnis earum maiores! Sequi provident dolore quasi
+                                    praesentium nobis
+                                    temporibus veritatis, ullam incidunt error nostrum perspiciatis at odio explicabo?
+                                    Maiores eius quod
+                                    quos itaque commodi quam dolorem at iure. Est repellendus hic soluta consequuntur
+                                    porro quam obcaecati
+                                    vel quos illum totam officiis officia doloribus ipsum quas quia, deserunt amet sit
+                                    repudiandae, nisi
+                                    nam id fuga neque! Eligendi sunt voluptates harum? Eos molestias sint voluptas iste
+                                    ea illum minus
+                                    nesciunt, sapiente aperiam ullam quas soluta optio similique earum repellat hic eum
+                                    vero at. Nostrum?
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+                <!-- Card -->
+            </div>
+            
         </section>
     </main><!-- End #main -->
 
@@ -221,11 +270,11 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Materials</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="material.html">Materials</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="about.html">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="about.html">Privacy policy</a></li>
                         </ul>
                     </div>
 

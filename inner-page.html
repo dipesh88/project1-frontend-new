@@ -6,12 +6,23 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Get Your Quote</title>
+  <style>
+    #material {
+      float: left;
+      width: 40%;
+    }
+
+    #shipping {
+      float: right;
+      width: 70%;
+    }
+  </style>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/images.png" rel="icon">
-  <link href="assets/img/images.png" rel="apple-touch-icon">
+  <link href="images.png" rel="icon">
+  <link href="images.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -40,15 +51,14 @@
 
       <h1 class="logo"><a href="index.html">3D <span>PRINTING</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="index.html/#about">About</a></li>
-          <li><a href="index.html/#materials">Material</a></li>
-          <li><a href="index.html/#contact">Contact</a></li>
-          <li><a href="index.html/#team">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="material.html">Material</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -148,102 +158,136 @@
     </section><!-- End Breadcrumbs -->
 
     <section class="inner-page">
-      <div class="container px-lg-5">
-        <div class="row mx-lg-n5">
-          <!-- Card -->
-          <div style="border:solid 3px black; width: 700px; margin-left: 50px;"
-            class="col py-3 px-lg-5 border bg-light">
-            <div class="pt-4 pb-3">
+      <div id="material" class="row mx-lg-n5">
+        <!-- Card -->
+        <div style="border:solid 3px black; width: 500px; margin-left: 20px;" class="col py-3 px-lg-5 border bg-light">
+          <div class="pt-4 pb-3">
 
-              <!-- Grid row -->
-              <div style="margin-left: 50px;" class="row">
+            <!-- Grid row -->
+            <!-- <div style="margin-left: 50px;" class="row"> -->
 
-                <!-- Grid column -->
-                <div class="col-lg-6 mb-5 mb-lg-0">
+            <!-- Grid column -->
+            <div style="width: 700px;" class="col-lg-6 mb-5 mb-lg-0">
 
-                  <h5 class="mb-4 pb-1">MATERIAL DETAIL</h5>
-                  <!-- DIMENSIONS -->
-                  <div class="d-flex flex-wrap">
-                    <div class="select-outline position-relative w-100">
-                      <label style="margin-right:20px;">DIMENSIONS</label>
-                      <select style="padding-inline: 120px;" class="mdb-select md-form md-outline">
-                        <option value="" disabled selected>units</option>
-                        <option value="1">MM</option>
-                        <option value="2">CM</option>
-                        <option value="3">INCH</option>
-                      </select>
-                    </div>
-                  </div><br>
-                  
-                  <!-- LENGTH -->
-                  <div class="md-form md-outline mt-0">
-                    <input type="number" id="form15" placeholder="number" class="form-control">
-                    <label for="form15">LENGTH</label>
-                  </div>
+              <h5 class="mb-4 pb-1">MATERIAL DETAIL</h5>
+              <!-- DIMENSIONS -->
+              <div class="d-flex flex-wrap">
+                <div class="select-outline position-relative w-100">
+                  <label style="margin-right:20px;">DIMENSIONS</label>
+                  <select style="padding-inline: 120px;" class="mdb-select md-form md-outline">
+                    <option value="" disabled selected>units</option>
+                    <option value="1">MM</option>
+                    <option value="2">CM</option>
+                    <option value="3">INCH</option>
+                  </select>
+                </div>
+              </div><br>
 
-                  <!-- BREATH-->
-                  <div class="md-form md-outline mt-0">
-                    <input type="number" id="form16" placeholder="number" class="form-control">
-                    <label for="form16">BREATH</label>
-                  </div>
+              <!-- LENGTH -->
+              <div class="md-form md-outline mt-0">
+                <input type="number" id="form15" placeholder="number" class="form-control">
+                <label for="form15">LENGTH</label>
+              </div>
 
-                  <!-- HEIGHT -->
-                  <div class="md-form md-outline mt-0">
-                    <input type="number" id="form17" placeholder="number" class="form-control">
-                    <label for="form17">HEIGHT</label>
-                  </div>
-                  <br>
+              <!-- BREATH-->
+              <div class="md-form md-outline mt-0">
+                <input type="number" id="form16" placeholder="number" class="form-control">
+                <label for="form16">BREATH</label>
+              </div>
 
-                  <!-- RESOLUTION -->
-                  <div class="d-flex flex-wrap">
-                    <div class="select-outline position-relative w-100">
-                      <label style="margin-right:20px;">RESOLUTION</label>
-                      <select style="padding-left: 100px; width: 280px;" class="mdb-select md-form md-outline">
-                        <option value="" disabled selected>select</option>
-                        <option value="1">HIGH RESOLUTION</option>
-                        <option value="2">LOW RESOLUTION</option>
-                      </select>
-                    </div>
-                  </div>
-                  <br>
-                  <form name="form1" id="form1" action="ship.html">
-                    PROCESS <select style="width: 205px; padding-left: 50px;" name="subject" id="subject">
-                      <option value="" selected="selected">process</option>
-                    </select>
-                    <br><br>
-                    MATERIAL <select style="width: 200px; padding-left: 50px;" name="topic" id="topic">
-                      <option value="" selected="selected">material</option>
-                    </select>
-                    <br><br>
-                    COLOUR <select style="width: 210px; padding-left: 60px;" name="chapter" id="chapter">
-                      <option value="" selected="selected">colour</option>
-                    </select>
-                    <br><br>
+              <!-- HEIGHT -->
+              <div class="md-form md-outline mt-0">
+                <input type="number" id="form17" placeholder="number" class="form-control">
+                <label for="form17">HEIGHT</label>
+              </div>
+              <br>
 
-                  <h5 class="mb-4 pb-1">Additional information</h5>
-
-                    <!-- Additional information -->
-                    <div class="md-form md-outline">
-                      <textarea id="form76" class="md-textarea form-control" rows="4"></textarea>
-                      <label for="form76">Additional information</label>
-                    </div>
-                    <br>
-
-                      <!-- NO. OF COPIES -->
-                  <div class="md-form md-outline mt-0">
-                    <input type="number" id="form15" placeholder="number of copies" class="form-control">
-                    <label for="form15">COPIES</label>
-                  </div><BR>
-                    <input style="width: 210px; padding-left: 30px;" type="submit" value="Submit">
-                  </form>
+              <!-- RESOLUTION -->
+              <div class="d-flex flex-wrap">
+                <div class="select-outline position-relative w-100">
+                  <label style="margin-right:50px;">RESOLUTION</label>
+                  <select style="padding-left: 100px; width: 280px;" class="mdb-select md-form md-outline">
+                    <option value="" disabled selected>select</option>
+                    <option value="1">HIGH RESOLUTION</option>
+                    <option value="2">LOW RESOLUTION</option>
+                  </select>
                 </div>
               </div>
-              <!-- Grid row -->
-            </div><br>
-            <!-- Card -->
+              <br>
+              <form name="form1" id="form1" action="ship.html">
+                PROCESS <select style="width: 205px; padding-left: 50px;" name="subject" id="subject">
+                  <option value="" selected="selected">process</option>
+                </select>
+                <br><br>
+                MATERIAL <select style="width: 200px; padding-left: 50px;" name="topic" id="topic">
+                  <option value="" selected="selected">material</option>
+                </select>
+                <br><br>
+                COLOUR <select style="width: 210px; padding-left: 60px;" name="chapter" id="chapter">
+                  <option value="" selected="selected">colour</option>
+                </select>
+                <br><br>
+
+                <h5 class="mb-4 pb-1">Additional information</h5>
+
+                <!-- Additional information -->
+                <div class="md-form md-outline">
+                  <textarea id="form76" class="md-textarea form-control" rows="4"></textarea>
+                  <label for="form76">Additional information</label>
+                </div>
+                <br>
+                <!-- NO. OF COPIES -->
+                <div class="md-form md-outline mt-0">
+                  <input type="number" id="form15" placeholder="number of copies" class="form-control">
+                  <label for="form15">COPIES</label>
+                </div><BR>
+                <input style="width: 210px; padding-left: 30px;" type="submit" value="Submit">
+              </form>
+            </div>
           </div>
+          <!-- Grid row -->
         </div>
+        <!-- Card -->
       </div>
+    
+      <div id="shipping" class="row mx-lg-n5">
+        <!-- Card -->
+        <div style="border:solid 3px black;  width: 1000px; height: 1016px; margin-left: 0px;"
+          class="col py-3 px-lg-5 border bg-light">
+          <div class="pt-4 pb-3">
+
+            <!-- Grid row -->
+            <div style="margin-left: 50px;" class="row">
+
+              <!-- Grid column -->
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <h1>upload your part</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim et quisquam doloribus quo error
+                  corrupti dolor asperiores omnis earum maiores! Sequi provident dolore quasi praesentium nobis
+                  temporibus veritatis, ullam incidunt error nostrum perspiciatis at odio explicabo? Maiores eius quod
+                  quos itaque commodi quam dolorem at iure. Est repellendus hic soluta consequuntur porro quam obcaecati
+                  vel quos illum totam officiis officia doloribus ipsum quas quia, deserunt amet sit repudiandae, nisi
+                  nam id fuga neque! Eligendi sunt voluptates harum? Eos molestias sint voluptas iste ea illum minus
+                  nesciunt, sapiente aperiam ullam quas soluta optio similique earum repellat hic eum vero at. Nostrum?
+                </p>
+                <form class="md-form md-outline">
+                  <div class="file-field">
+                    <!-- <div class="btn btn-primary btn-sm float-left"> -->
+                      <span>Choose file</span>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="form-control file-path validate" type="text" placeholder="Upload">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+          <!-- Card -->
+        </div>
       </div>
     </section>
   </main><!-- End #main -->
@@ -255,7 +299,6 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
               <h3>3D<span>PRINTING</span></h3>
@@ -279,10 +322,10 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Materials</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="material.html">Materials</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Privacy policy</a></li>
             </ul>
           </div>
 
@@ -303,9 +346,7 @@
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
-
           </div>
-
         </div>
       </div>
     </div>
